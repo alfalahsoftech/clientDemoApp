@@ -1,0 +1,11 @@
+[
+	{
+		"id": "Menu_001_Super_User",
+		"name": "Menu_001_Super_User_LBL",
+		"menuItemIDArray": [
+			"Menu_Dashboard_001"
+		],
+		"class": "active",
+		"hrefClass": "dropdown-toggle"
+	}
+]

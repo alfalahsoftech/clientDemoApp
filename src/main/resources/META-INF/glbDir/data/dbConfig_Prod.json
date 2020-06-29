@@ -1,0 +1,16 @@
+
+{
+	"persistenceUnitName":"bake",
+   "dbName":"POSTGRES",
+   "dbUserName": "vxxqblgjledmqj",
+   "dbPassword":"861af08f76b547eff62fac4c93287f5fbbea4a74c73438fe92d04b2768859df3",
+   "dbURL":"jdbc:postgresql://ec2-23-21-87-183.compute-1.amazonaws.com:5432/d2pekjhtjmhvui?sslmode=require" , 
+   "driver_Class" : "org.postgresql.Driver",
+   "catalogName":"SAMITECH",
+   "hbm2ddl":"update",
+   "isDevMod":false,
+   "host":"ec2-23-21-87-183.compute-1.amazonaws.com"
+}
+
+
+

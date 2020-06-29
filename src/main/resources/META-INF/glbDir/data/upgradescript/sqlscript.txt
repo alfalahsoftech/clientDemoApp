@@ -1,0 +1,97 @@
+alter table eoclient add sun boolean default false;
+alter table eoclient add mon boolean default false;
+alter table eoclient add tue boolean default false;
+alter table eoclient add wed boolean default false;
+alter table eoclient add thu boolean default false;
+alter table eoclient add fri boolean default false;
+alter table eoclient add sat boolean default false;
+
+
+
+
+
+
+CREATE TABLE public.eoorderday
+(
+    primarykey bigint NOT NULL,
+    orderdate timestamp without time zone,
+    ttitem integer,
+    orderno character varying(255) COLLATE pg_catalog."default",
+    orderStatus character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT eoorderday_pkey PRIMARY KEY (primarykey)
+)
+ALTER TABLE public.eoorderday alter COLUMN   orderstatus  type VARCHAR
+===============
+
+CREATE TABLE public.eoorderdaydetail
+(
+    primarykey bigint NOT NULL,
+    notes character varying(255) COLLATE pg_catalog."default",
+    orderdate date,
+    orderno character varying(255) COLLATE pg_catalog."default",
+    quantity integer,
+    eoclientpk bigint,
+    eoitempk bigint,
+    eoorderdaypk bigint,
+    CONSTRAINT eoorderdaydetail_pkey PRIMARY KEY (primarykey),
+    CONSTRAINT fk_3vqc7yowkxt40nacnj7od29yr FOREIGN KEY (eoorderdaypk)
+        REFERENCES public.eoorderday (primarykey) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT fk_kcq4ixagct7d0cyr659796jnw FOREIGN KEY (eoclientpk)
+        REFERENCES public.eoclient (primarykey) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT fk_r1pp7gs7qnpaq4cbdgvtagdnf FOREIGN KEY (eoitempk)
+        REFERENCES public.eoitem (primarykey) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+
+===========================
+
+
+
+
+
+
+
+CREATE TABLE public.eoroute
+(
+    primarykey bigint NOT NULL,
+    fri boolean NOT NULL,
+    mon boolean NOT NULL,
+    notes character varying(255) COLLATE pg_catalog."default",
+    orderdays character varying(255) COLLATE pg_catalog."default",
+    routename character varying(255) COLLATE pg_catalog."default",
+    sat boolean NOT NULL,
+    statename character varying(255) COLLATE pg_catalog."default",
+    sun boolean NOT NULL,
+    thu boolean NOT NULL,
+    tue boolean NOT NULL,
+    wed boolean NOT NULL,
+    CONSTRAINT eoroute_pkey PRIMARY KEY (primarykey)
+)
+
+
+
+
+
+
+CREATE TABLE public.eoroute_eoclient
+(
+    eoroute_primarykey bigint NOT NULL,
+    clientlist_primarykey bigint NOT NULL,
+    CONSTRAINT eoroute_eoclient_pkey PRIMARY KEY (eoroute_primarykey, clientlist_primarykey),
+    CONSTRAINT uk_ciuqxje7e33qey96o748yyyom UNIQUE (clientlist_primarykey)
+,
+    CONSTRAINT fk_ciuqxje7e33qey96o748yyyom FOREIGN KEY (clientlist_primarykey)
+        REFERENCES public.eoclient (primarykey) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT fk_il4k13lfhyr29eqy06c9wihny FOREIGN KEY (eoroute_primarykey)
+        REFERENCES public.eoroute (primarykey) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)

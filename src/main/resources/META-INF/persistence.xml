@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="bake" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+		<!-- @Samdani: Find the below properties in AvailableSettings of hibernate-c3p0 
+			jar -->
+		<!-- <class>com.alflah.entity.Person</class> -->
+		<properties>
+			<!--This is basic configuration.You may use any provider -->
+			<!-- basic configuration -->
+			 <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/TnD" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="postgres" />
+			<property name="javax.peristence.jdbc.driver" value="org.postgresql.Driver" />
+ 		<!-- basic configuration -->
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true"/>
+			<!-- <property name="javax.persistence.logging.level" value="INFO" />  -->
+
+			<!-- <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/> 
+				<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" 
+				/> <property name="hibernate.show_sql" value="false" /> <property name="hibernate.format_sql" 
+				value="false" /> Connection Pooling settings <property name="hibernate.connection.provider_class" 
+				value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" 
+				/> <property name="hibernate.c3p0.max_size" value="100" /> <property name="hibernate.c3p0.min_size" 
+				value="0" /> <property name="hibernate.c3p0.acquire_increment" value="1" 
+				/> <property name="hibernate.c3p0.idle_test_period" value="300" /> <property 
+				name="hibernate.c3p0.max_statements" value="0" /> <property name="hibernate.c3p0.timeout" 
+				value="100" /> <property name="hibernate.hbm2ddl.auto" value="update"/> -->
+			
+			<!-- 	<bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource">
+					<property name="baseNames">
+						<list>msg_IN</list>
+					 </property>
+				</bean>
+				
+				<bean  class="org.springframework.dbcp.datasource.DriverManagerDataSource" id="dataSource">
+					<property name="driverClassName" value="org.postgres.Driver"></property>
+					<property name="url" value="jdbc:oracal:thin@localhost:1521"></property>
+					<property name="username" value="s"></property>
+					<property name="password" value=p></property>
+				</bean>
+				<bean class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" id="sessionFactory"> 
+					<property name="dataSource" >
+						<ref bean="dataSource"></ref>
+					</property>
+					<property name="hibernateProperties">
+						<props>
+						  <prop key="hibernate.show_sql"> true</prop>
+						  <prop key="hibernate.dialect">org.hibernate.dialect.PosgresSQLDialect</prop>
+						  <prop key="hibernate.hbm2ddl.auto">update</prop>
+						</props>
+					</property>
+				</bean> -->
+		</properties>
+
+	</persistence-unit>
+	
+</persistence>
