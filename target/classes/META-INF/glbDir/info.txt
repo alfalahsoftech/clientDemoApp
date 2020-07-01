@@ -1,0 +1,20 @@
+//printing getProperties of EntityManager
+
+{
+	javax.persistence.lock.timeout=-1, 
+	org.hibernate.flushMode=AUTO, 
+	javax.persistence.cache.retrieveMode=USE,
+ 	javax.persistence.lock.scope=EXTENDED,
+ 	javax.persistence.cache.storeMode=USE
+ }
+ 
+ ========================
+ 
+ //@Column(updatable=false, insertable=false)
+	private Long primaryKey;
+
+if you don't specify then below exception occures
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.alflah.entity.User column: primaryKey (should be mapped with insert="false" update="false")
+
+
+	

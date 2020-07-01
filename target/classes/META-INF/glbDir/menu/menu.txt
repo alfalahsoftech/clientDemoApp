@@ -1,0 +1,17 @@
+[
+	{	
+		"MenuList" :[
+			{
+				"Home" : {
+					"name" : "Home",
+					"iid" :  "HOME",
+					"url" : "clientSummary",
+					"displayOrder" : 1.0,
+					
+				}
+			}
+			
+		]
+	}
+
+]

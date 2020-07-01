@@ -54,6 +54,7 @@ import com.alfalahsoftech.inv.entity.EOStore;
 import com.alfalahsoftech.inv.entity.EOStuff;
 import com.alfalahsoftech.inv.entity.EOStuffDetail;
 import com.alfalahsoftech.inv.entity.LKJobCode;
+import com.alfalahsoftech.medi.entity.EOMedicine;
 import com.alfalahsoftech.service.UserService;
 import com.alfalahsoftech.service.UserSrvcImpl;
 import com.alfalahsoftech.ui.object.DailyLbrDetail;
@@ -62,6 +63,7 @@ import com.alfalahsoftech.ui.object.EOOrderDayDetailUIO;
 import com.alfalahsoftech.ui.object.EOStuffUIO;
 import com.alfalahsoftech.web.AFObject;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 @AFController
 @Path("food")
@@ -688,9 +690,11 @@ public class FDOrderController extends FoodBaseController {
 		}
 	}
 	public static void main(String[] args) throws CloneNotSupportedException {
-		//		Gson gSon=  new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+		
+				Gson gSon=  new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 		String json="[{\"fkStatus\":19},{\"primaryKey\":26,\"busiDate\":\"2019-05-10\",\"ttMade\":2,\"name\":\"sd\",\"isPresent\":true,\"isEditDisabled\":false},{\"primaryKey\":27,\"busiDate\":\"2019-05-10\",\"ttMade\":2,\"name\":\"Jehan\",\"isPresent\":true,\"isEditDisabled\":false},{\"primaryKey\":28,\"busiDate\":\"2019-05-10\",\"ttMade\":0,\"name\":\"Rabbani\",\"isPresent\":false,\"isEditDisabled\":true},{\"primaryKey\":29,\"busiDate\":\"2019-05-10\",\"ttMade\":0,\"isPresent\":false,\"isEditDisabled\":true},{\"primaryKey\":30,\"busiDate\":\"2019-05-10\",\"ttMade\":0,\"name\":\"Sam\",\"isPresent\":false,\"isEditDisabled\":true}]";
-		JSONArray j = new JSONArray(json);
+		gSon.fromJson("{\"discount\":2,\"expDate\":\"2020-03-12\"}",EOMedicine.class);
+		/*JSONArray j = new JSONArray(json);
 		System.out.println(j.get(0));
 
 
@@ -708,7 +712,7 @@ public class FDOrderController extends FoodBaseController {
 			int primaryKey  =(int)hash.get("primaryKey");
 			System.out.println(ttMade+" "+isPresent+" "+primaryKey);
 		}
-
+*/
 		//		AFArrayList<UIEOStuffDetail> ls = new AFArrayList<>();
 		//		for (int i = 0; i < j.length(); i++) {
 		//			ls.add(gSon.fromJson(j.getJSONObject(i).toString(),UIEOStuffDetail.class));

@@ -30,6 +30,7 @@ import com.alfalahsoftech.alframe.util.AFJsonParserUtil;
 import com.alfalahsoftech.common.file.AFJsonParser;
 import com.alfalahsoftech.inv.entity.AFMainEntity;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 public abstract class AFObject implements FNBaseSerialInterface, FNObjectInterface, Serializable {
@@ -84,7 +85,8 @@ public abstract class AFObject implements FNBaseSerialInterface, FNObjectInterfa
 		}
 	}
 	public Gson gson() {
-		return new Gson();
+		Gson gSon=  new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+		return gSon;
 	}
 	public <T> T getObjFromStr(Class<T> t,String req){
 		return (T)this.gson().fromJson(req, t);
@@ -244,7 +246,8 @@ public abstract class AFObject implements FNBaseSerialInterface, FNObjectInterfa
 
 	@Override
 	public void handleTakeValueForUnboundKey(Object _value, String _key) {
-		throw new RuntimeException("");//FNUnboundKeyException(logger, FNLogLevel.TRACE, this.getReqRespObject(), "FNObject~handleTakeValueForUnboundKey~NoSuchKey:" + this.getClass().getName() + ":" + _key, this, "_key~className", null, _key, this.getClass().getName());
+		
+		throw new RuntimeException("handleTakeValueForUnboundKey~NoSuchKey:" + _key+ "_key~className"+ this.getClass().getName()+"  _value:  "+_value);//FNUnboundKeyException(logger, FNLogLevel.TRACE, this.getReqRespObject(), "FNObject~handleTakeValueForUnboundKey~NoSuchKey:" + this.getClass().getName() + ":" + _key, this, "_key~className", null, _key, this.getClass().getName());
 	}
 
 	public void handleTakeValueForUnboundSetKey(Object _value, String _key) {
@@ -287,8 +290,8 @@ public abstract class AFObject implements FNBaseSerialInterface, FNObjectInterfa
 		return AFReqRespThreadFactory.factory().getReqRespObject();
 	}
 
-	public <T> T updateObject(Class<T> t,String req) {
-		AFHashMap<String, Object> map =AFJsonParserUtil.toMap(new JSONObject(req));
+	public <T> T updateObject(Class<T> t,String reqStr) {
+		AFHashMap<String, Object> map =AFJsonParserUtil.toMap(new JSONObject(reqStr));
 		printObj(map);
 		printObj(map.get(PK)==null?"Primarykey  not found":map.get(PK));
 		List<T> list = this.reqRespObject().reqEM().createQuery("SELECT e FROM "+t.getSimpleName()+" e where primaryKey="+map.get(PK),t).getResultList();

@@ -1,0 +1,16 @@
+
+{
+	"persistenceUnitName":"bake",
+   "dbName":"postgres",
+   "dbUserName": "postgres",
+   "dbPassword":"postgres",
+   "dbURL":"jdbc:postgresql://localhost:5432" , 
+   "driver_Class" : "org.postgresql.Driver",
+   "catalogName":"SAMITech",
+   "hbm2ddl":"update",
+   "isDevMod":true,
+   "host":"localhost"
+}
+
+
+

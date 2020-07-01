@@ -19,6 +19,7 @@ import com.alfalahsoftech.exception.AFExceptionMapper;
 import com.alfalahsoftech.fd.controller.FDOrderController;
 import com.alfalahsoftech.fd.controller.FDSettingsController;
 import com.alfalahsoftech.fd.controller.FoodBaseController;
+import com.alfalahsoftech.medi.controller.AFMediController;
 import com.alfalahsoftech.web.AFWBFirstPageFilter;
 import com.alfalahsoftech.web.AFWBSecurityFilter;
 import com.alfalahsoftech.web.AFWebReqListener;
@@ -62,6 +63,7 @@ public class AlamApplication extends Application {
 		classes.add(LoginLogoutController.class);
 		classes.add(FDSettingsController.class);
 		classes.add(FDOrderController.class);
+		classes.add(AFMediController.class);
 		//Controller End
 	
 		//Filter Start
