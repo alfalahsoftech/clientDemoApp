@@ -10,6 +10,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.json.JSONObject;
+
 import com.alfalahsoftech.alframe.AFHashMap;
 import com.alfalahsoftech.controller.AFBaseController;
 import com.alfalahsoftech.medi.entity.EOMedicine;
@@ -60,7 +62,44 @@ public class AFMediController extends AFBaseController {
 	@Produces(value= { MediaType.APPLICATION_JSON})
 	public Response updateMedi(String reqStr) {
 		printObj("updateMedi request:  "+reqStr);
-		EOMedicine obj = this.updateObject(EOMedicine.class,reqStr);
+		
+		JSONObject jsonObj=new JSONObject(reqStr);
+		EOMedicine medi =this.getObjFromStr(EOMedicine.class	, reqStr);
+		
+	//	EOMedicine obj = (EOMedicine)this.reqRespObject().reqEM().createQuery("SELECT e FROM EOMedicine e where primaryKey="+jsonObj.getLong("primaryKey")).getResultList().get(0);
+		/*obj.setItemID(	jsonObj.getString("itemID"));
+		obj.setMediName(jsonObj.getString("mediName"));
+		obj.setScheme(jsonObj.getString("scheme"));
+		obj.setBatchNo(	jsonObj.getString("batchNo"));
+		obj.setUOM(	jsonObj.getString("UOM"));
+		obj.setDiscount(	jsonObj.getDouble("discount"));
+		obj.setNetRate(jsonObj.getDouble("netRate"));
+		obj.setMrp(jsonObj.getDouble("mrp"));
+		obj.setIsActive(jsonObj.getInt("isActive")==0?false:true);
+		obj.setExpDate(this.formatedDate(jsonObj.getString("expDate")));
+		obj.setNotes(jsonObj.getString("notes"));*/
+		EOMedicine obj= null;
+		for (int i = 1; i < 500; i++) {
+			 obj = new EOMedicine();
+		obj.setItemID(medi.getItemID());
+		obj.setMediName(medi.getMediName());
+		obj.setScheme(medi.getScheme());
+		obj.setBatchNo(medi.getBatchNo());
+		obj.setUOM(	medi.getUOM());
+		obj.setDiscount(medi.getDiscount());
+		obj.setNetRate(medi.getNetRate());
+		obj.setMrp(medi.getMrp());
+		obj.setIsActive(medi.getIsActive());
+		obj.setExpDate(medi.getExpDate());
+		obj.setNotes(medi.getNotes());
+		//Transaxtion
+		this.reqRespObject().startTransaction();
+		this.reqRespObject().reqEM().persist(obj);
+		this.reqRespObject().endTransaction();
+		
+	
+			
+		}
 		 response = this.createResponse(obj);
 		return response;
 	}

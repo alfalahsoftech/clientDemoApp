@@ -32,7 +32,7 @@ public class EOMedicine extends AFMainEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date addedOn = new Date();
 	private Boolean isActive;
-	
+	private String notes;
 	@Override
 	public Long primaryKey() {
 		return this.primaryKey;
@@ -127,6 +127,14 @@ public class EOMedicine extends AFMainEntity {
 
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 
 	
