@@ -14,6 +14,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.alfalahsoftech.alframe.AFConstant;
+import com.alfalahsoftech.web.AFApplicationObject;
 import com.alfalahsoftech.web.AFObject;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -168,15 +170,61 @@ public class AFJsonParser extends AFObject{
 		}
 		return jsonObj;	
 	}
+	
+	public static ArrayList<String> getAllMedi(){
+
+		File file = new File(AFApplicationObject.META_PATH+"glbDir/medi.txt");
+		ArrayList<String> mediList = new ArrayList<>();
+		try {
+		FileReader fr = new FileReader(file);
+		BufferedReader bfr = new BufferedReader(fr);
+		String line  = bfr.readLine();
+		while (line != null) {
+			System.out.println(line);
+			if(line.trim().equalsIgnoreCase("<tr>")) {
+				line  = bfr.readLine();
+				line  = bfr.readLine();
+				line = line.replace("<td>", "").replace("</td>","");
+				mediList.add(line.trim());
+				
+			}
+			line  = bfr.readLine();
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(mediList);
+		return mediList;
+	}
 
 	public static void main(String[] args) {
 		
 		System.out.println("ssssssssssssparsing----------------");
 		
-		
+		File file = new File("./src/main/resources/META-INF/glbDir/medi.txt");
+		ArrayList<String> mediList = new ArrayList<>();
+		try {
+		FileReader fr = new FileReader(file);
+		BufferedReader bfr = new BufferedReader(fr);
+		String line  = bfr.readLine();
+		while (line != null) {
+			System.out.println(line);
+			if(line.trim().equalsIgnoreCase("<tr>")) {
+				line  = bfr.readLine();
+				line  = bfr.readLine();
+				line = line.replace("<td>", "").replace("</td>","");
+				mediList.add(line.trim());
+				
+			}
+			line  = bfr.readLine();
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(mediList);
 		
 		//		File file = new File(AFWebContextListener.contextPath+"src/main/resources/META-INF/glbDir/menu/menu.txt");
-		File file = new File("./src/main/resources/META-INF/glbDir/menu/menu.txt");
+		file = new File("./src/main/resources/META-INF/glbDir/menu/menu.txt");
 		//		File file = new File("X:/Other_Workspace/CentralMonitoring/src/main/resources/META-INF/setup/smsAdaptors.json");
 		try {
 

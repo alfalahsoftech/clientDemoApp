@@ -65,6 +65,11 @@ public abstract class AFBaseController extends AFObject {
 		List<AFMainEntity> clientList = this.entityMgr().createQuery("SELECT e FROM "+cls.getSimpleName()+" e").getResultList();
 		return clientList;
 	}
+	
+	public  <T>  T genericAllData(Class<T> cls){
+		List<T> clientList = this.entityMgr().createQuery("SELECT e FROM "+cls.getSimpleName()+" e").getResultList();
+		return (T) clientList;
+	}
 	public EntityManager entityMgr() {
 		return this.reqRespObjec().reqEM().getEntityManager();
 	}

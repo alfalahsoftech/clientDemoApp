@@ -33,6 +33,13 @@ public class EOMedicine extends AFMainEntity {
 	private Date addedOn = new Date();
 	private Boolean isActive;
 	private String notes;
+	
+	//
+    private Integer onHand;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date modifiedOn;
+    private Double purchasePrice;
+    
 	@Override
 	public Long primaryKey() {
 		return this.primaryKey;
@@ -137,6 +144,34 @@ public class EOMedicine extends AFMainEntity {
 		this.notes = notes;
 	}
 
+	public Integer getOnHand() {
+		return onHand;
+	}
+
+	public void setOnHand(Integer onHand) {
+		this.onHand = onHand;
+	}
+
+	public Date getModifiedOn() {
+		return modifiedOn;
+	}
+
+	public void setModifiedOn(Date modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+
+	public Double getPurchasePrice() {
+		return purchasePrice;
+	}
+
+	public void setPurchasePrice(Double purchasePrice) {
+		this.purchasePrice = purchasePrice;
+	}
+
+	public Long getPrimaryKey() {
+		return primaryKey;
+	}
+	
 	
 
 }

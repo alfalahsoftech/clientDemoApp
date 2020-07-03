@@ -1,6 +1,11 @@
 package com.alfalahsoftech.medi.controller;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -13,6 +18,7 @@ import javax.ws.rs.core.Response;
 import org.json.JSONObject;
 
 import com.alfalahsoftech.alframe.AFHashMap;
+import com.alfalahsoftech.common.file.AFJsonParser;
 import com.alfalahsoftech.controller.AFBaseController;
 import com.alfalahsoftech.medi.entity.EOMedicine;
 
@@ -20,7 +26,7 @@ import com.alfalahsoftech.medi.entity.EOMedicine;
 public class AFMediController extends AFBaseController {
 
 	Response response;
-	
+
 	@POST
 	@Path("/addMedi")
 	@Consumes(value= { MediaType.APPLICATION_JSON})
@@ -32,19 +38,26 @@ public class AFMediController extends AFBaseController {
 		this.commit();
 		return "{msg:Successfully added!}";
 	}
-	
+
 	@POST
 	@Path("/dispMedi")
 	@Consumes(value= { MediaType.APPLICATION_JSON})
 	@Produces(value= { MediaType.APPLICATION_JSON})
 	public Response dispMedi(String reqStr) {
 		printObj("dispMedi request:  "+reqStr);
-		List list =  this.getAllData(EOMedicine.class);
-		String retData = "{msg:Nothing to display !}";
-		 response = this.createResponse(list);
+		List<EOMedicine> list =  (List<EOMedicine>) this.genericAllData(EOMedicine.class);
+		
+		print("Reading medicnie files===============");
+		AtomicInteger i = new AtomicInteger(0);
+		ArrayList<String> mediList = AFJsonParser.getAllMedi();
+		mediList.forEach(mediName->{
+			list.get(i.getAndIncrement()).setMediName(mediName);
+		});
+		response = this.createResponse(list);
+		System.out.println(list);
 		return response;
 	}
-	
+
 	@POST
 	@Path("/editMedi/{mediPK}")
 	@Consumes(value= { MediaType.APPLICATION_JSON})
@@ -52,21 +65,21 @@ public class AFMediController extends AFBaseController {
 	public Response editMedi(@PathParam("mediPK") String mediPK) {
 		printObj("edit request:  "+mediPK);
 		Object obj = this.reqRespObject().reqEM().createQuery("SELECT e FROM EOMedicine e where primaryKey="+mediPK).getResultList().get(0);//this.getUniqueObject("EOMedicine", mediPK);
-		 response = this.createResponse(obj);
+		response = this.createResponse(obj);
 		return response;
 	}
-	
+
 	@POST
 	@Path("/updateMedi")
 	@Consumes(value= { MediaType.APPLICATION_JSON})
 	@Produces(value= { MediaType.APPLICATION_JSON})
 	public Response updateMedi(String reqStr) {
 		printObj("updateMedi request:  "+reqStr);
-		
+
 		JSONObject jsonObj=new JSONObject(reqStr);
 		EOMedicine medi =this.getObjFromStr(EOMedicine.class	, reqStr);
-		
-	//	EOMedicine obj = (EOMedicine)this.reqRespObject().reqEM().createQuery("SELECT e FROM EOMedicine e where primaryKey="+jsonObj.getLong("primaryKey")).getResultList().get(0);
+
+		EOMedicine obj = (EOMedicine)this.reqRespObject().reqEM().createQuery("SELECT e FROM EOMedicine e where primaryKey="+jsonObj.getLong("primaryKey")).getResultList().get(0);
 		/*obj.setItemID(	jsonObj.getString("itemID"));
 		obj.setMediName(jsonObj.getString("mediName"));
 		obj.setScheme(jsonObj.getString("scheme"));
@@ -78,9 +91,9 @@ public class AFMediController extends AFBaseController {
 		obj.setIsActive(jsonObj.getInt("isActive")==0?false:true);
 		obj.setExpDate(this.formatedDate(jsonObj.getString("expDate")));
 		obj.setNotes(jsonObj.getString("notes"));*/
-		EOMedicine obj= null;
+		/*	EOMedicine obj= null;
 		for (int i = 1; i < 500; i++) {
-			 obj = new EOMedicine();
+			 obj = new EOMedicine();*/
 		obj.setItemID(medi.getItemID());
 		obj.setMediName(medi.getMediName());
 		obj.setScheme(medi.getScheme());
@@ -96,11 +109,8 @@ public class AFMediController extends AFBaseController {
 		this.reqRespObject().startTransaction();
 		this.reqRespObject().reqEM().persist(obj);
 		this.reqRespObject().endTransaction();
-		
-	
-			
-		}
-		 response = this.createResponse(obj);
+		//	}
+		response = this.createResponse(obj);
 		return response;
 	}
 
