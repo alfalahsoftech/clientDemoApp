@@ -1,0 +1,694 @@
+<tbody id="medicine_content">
+		   <tr>
+	   <td>1</td>
+	   <td>ACER LEVOFLOXACIN 500MG</td>
+	   <td>2332</td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/451">Edit</a></li>
+             <li><a href="medicine-delete/451">Delete</a></li>
+             <li><a href="medicine-prescription/451">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>2</td>
+	   <td>ACINIL OMEPRAZOLE 20MG TABLET</td>
+	   <td>12415</td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>10000</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1483">Edit</a></li>
+             <li><a href="medicine-delete/1483">Delete</a></li>
+             <li><a href="medicine-prescription/1483">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>3</td>
+	   <td>ACIVIR EYE OINTMENT 3%</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>OINTMENT</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1872">Edit</a></li>
+             <li><a href="medicine-delete/1872">Delete</a></li>
+             <li><a href="medicine-prescription/1872">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>4</td>
+	   <td>ACNE MEDICATION CLEANSER</td>
+	   <td>wrwr5</td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td>xyz</td>
+	   <td></td>
+	   <td>0</td>
+	   <td>CLEANSER</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1441">Edit</a></li>
+             <li><a href="medicine-delete/1441">Delete</a></li>
+             <li><a href="medicine-prescription/1441">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>5</td>
+	   <td>ACNE STRESS CONTROL OIL FREE</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TONER</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1363">Edit</a></li>
+             <li><a href="medicine-delete/1363">Delete</a></li>
+             <li><a href="medicine-prescription/1363">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>6</td>
+	   <td>ACNEAWAY CREAM</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>CREAM</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/817">Edit</a></li>
+             <li><a href="medicine-delete/817">Delete</a></li>
+             <li><a href="medicine-prescription/817">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>7</td>
+	   <td>ACTAVIS OMEPRAZOLE CAPSULE 20MG</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1526">Edit</a></li>
+             <li><a href="medicine-delete/1526">Delete</a></li>
+             <li><a href="medicine-prescription/1526">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>8</td>
+	   <td>ACTIFED COLD SYRUP</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>SYRUP</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1703">Edit</a></li>
+             <li><a href="medicine-delete/1703">Delete</a></li>
+             <li><a href="medicine-prescription/1703">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>9</td>
+	   <td>ACTIFED COLD TABLET</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1715">Edit</a></li>
+             <li><a href="medicine-delete/1715">Delete</a></li>
+             <li><a href="medicine-prescription/1715">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>10</td>
+	   <td>ACTm IPCA</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1335">Edit</a></li>
+             <li><a href="medicine-delete/1335">Delete</a></li>
+             <li><a href="medicine-prescription/1335">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>11</td>
+	   <td>Actos 20</td>
+	   <td>213</td>
+	   <td>2018-02-14</td>
+	   <td>21</td>
+	   <td>Actros</td>
+	   <td>Blood pressure</td>
+	   <td>21</td>
+	   <td>Blood ressure</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/3952">Edit</a></li>
+             <li><a href="medicine-delete/3952">Delete</a></li>
+             <li><a href="medicine-prescription/3952">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>12</td>
+	   <td>ACYCOR ACECLOFENAC 100MG TABLET</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1217">Edit</a></li>
+             <li><a href="medicine-delete/1217">Delete</a></li>
+             <li><a href="medicine-prescription/1217">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>13</td>
+	   <td>ACYCOR PLUS ACECLOFENAC</td>
+	   <td>24</td>
+	   <td>0000-00-00</td>
+	   <td>7</td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1208">Edit</a></li>
+             <li><a href="medicine-delete/1208">Delete</a></li>
+             <li><a href="medicine-prescription/1208">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>14</td>
+	   <td>ADALAT LA 30MG</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1096">Edit</a></li>
+             <li><a href="medicine-delete/1096">Delete</a></li>
+             <li><a href="medicine-prescription/1096">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>15</td>
+	   <td>ADALAT RETARD 30MG</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/994">Edit</a></li>
+             <li><a href="medicine-delete/994">Delete</a></li>
+             <li><a href="medicine-prescription/994">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>16</td>
+	   <td>ADAM'S DESIRE CAPSULE X15TAB</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2442">Edit</a></li>
+             <li><a href="medicine-delete/2442">Delete</a></li>
+             <li><a href="medicine-prescription/2442">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>17</td>
+	   <td>ADDYZOA CHARAK</td>
+	   <td>123</td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2265">Edit</a></li>
+             <li><a href="medicine-delete/2265">Delete</a></li>
+             <li><a href="medicine-prescription/2265">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>18</td>
+	   <td>Adgest 200</td>
+	   <td>IzzyMed130</td>
+	   <td>2020-11-30</td>
+	   <td>10001</td>
+	   <td>Biosys Medisciences</td>
+	   <td>Antibiotic</td>
+	   <td>26.9</td>
+	   <td>Natural Micronised Progesterone-200 mg</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/3369">Edit</a></li>
+             <li><a href="medicine-delete/3369">Delete</a></li>
+             <li><a href="medicine-prescription/3369">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>19</td>
+	   <td>ADIDAS BODY SPRAY 250ML</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>SPRAY</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/3048">Edit</a></li>
+             <li><a href="medicine-delete/3048">Delete</a></li>
+             <li><a href="medicine-prescription/3048">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>20</td>
+	   <td>adkm</td>
+	   <td>12</td>
+	   <td>2017-07-14</td>
+	   <td>lmsl2</td>
+	   <td>Cipla</td>
+	   <td></td>
+	   <td>200</td>
+	   <td></td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/3226">Edit</a></li>
+             <li><a href="medicine-delete/3226">Delete</a></li>
+             <li><a href="medicine-prescription/3226">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>21</td>
+	   <td>ADRENALINE EPINEPHRINE INJ</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>INJ</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2760">Edit</a></li>
+             <li><a href="medicine-delete/2760">Delete</a></li>
+             <li><a href="medicine-prescription/2760">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>22</td>
+	   <td>ADRENALINE HYDROCHLORIDE INJ</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>INJ</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2686">Edit</a></li>
+             <li><a href="medicine-delete/2686">Delete</a></li>
+             <li><a href="medicine-prescription/2686">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>23</td>
+	   <td>ADVANTAN 15G CREAM</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>CERAM</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/687">Edit</a></li>
+             <li><a href="medicine-delete/687">Delete</a></li>
+             <li><a href="medicine-prescription/687">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>24</td>
+	   <td>ADVANTAN 30G CREAM</td>
+	   <td>5000</td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>CERAM</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/791">Edit</a></li>
+             <li><a href="medicine-delete/791">Delete</a></li>
+             <li><a href="medicine-prescription/791">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>25</td>
+	   <td>ADVENTURES OF HUCKLEBERRY FINN</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>books</td>
+	   <td>No </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2670">Edit</a></li>
+             <li><a href="medicine-delete/2670">Delete</a></li>
+             <li><a href="medicine-prescription/2670">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>26</td>
+	   <td>ADVENTURES OF ROBIN HOOD</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>books</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2653">Edit</a></li>
+             <li><a href="medicine-delete/2653">Delete</a></li>
+             <li><a href="medicine-prescription/2653">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>27</td>
+	   <td>ADVENTURES OF TOM SAWYER</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>books</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2671">Edit</a></li>
+             <li><a href="medicine-delete/2671">Delete</a></li>
+             <li><a href="medicine-prescription/2671">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>28</td>
+	   <td>AFIRST OMEPRAZOLE 20MG TABLET</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>TAB</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/632">Edit</a></li>
+             <li><a href="medicine-delete/632">Delete</a></li>
+             <li><a href="medicine-prescription/632">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>29</td>
+	   <td>AFLACIN EYE DROP</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>DROP</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/1861">Edit</a></li>
+             <li><a href="medicine-delete/1861">Delete</a></li>
+             <li><a href="medicine-prescription/1861">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	   <tr>
+	   <td>30</td>
+	   <td>AFRAB VITE MULTIVITAMIN DROPS</td>
+	   <td></td>
+	   <td>0000-00-00</td>
+	   <td></td>
+	   <td></td>
+	   <td></td>
+	   <td>0</td>
+	   <td>DROPS</td>
+	   <td>Yes </td>
+	   <td><div class="btn-group">
+	   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+           Actions <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu">
+             <li><a target="_blank" href="medicine-edit/2408">Edit</a></li>
+             <li><a href="medicine-delete/2408">Delete</a></li>
+             <li><a href="medicine-prescription/2408">Toggle Prescription Status</a></li>
+           </ul>
+
+	    </div>
+	    </td>
+	   </tr>
+	   	
+	
+	</tbody>

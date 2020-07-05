@@ -3,10 +3,12 @@ package com.alfalahsoftech.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.alfalahsoftech.controller.AFBaseController;
 import com.alfalahsoftech.entity.User;
 import com.alfalahsoftech.inv.entity.AFMainEntity;
 import com.alfalahsoftech.inv.entity.EOClient;
 import com.alfalahsoftech.inv.entity.EOUser;
+import com.alfalahsoftech.medi.entity.EOMedicine;
 import com.alfalahsoftech.web.AFObject;
 
 public class UserSrvcImpl extends AFObject implements UserService {
@@ -58,7 +60,14 @@ public class UserSrvcImpl extends AFObject implements UserService {
 		EOUser user =(EOUser)this.reqRespObject().reqEM().createQuery("select e from EOUser e where primaryKey="+id).getSingleResult();
 		return user;
 	}
-
+	private static List<EOMedicine> meidlist  = new ArrayList<EOMedicine>();
+	public   List<EOMedicine> allEOMedicineData(){
+		if(UserSrvcImpl.meidlist.size() == 0) {
+			meidlist = this.reqRespObject().reqEM().createQuery("SELECT e FROM EOMedicine e").getResultList();
+			print("All medicne loaded##############");
+		}
+		return meidlist;
+	}
 
 
 	public EOUser updateUser(EOUser userToUpd){

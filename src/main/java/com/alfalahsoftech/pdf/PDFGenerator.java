@@ -8,6 +8,7 @@ import java.io.OutputStream;
 import java.io.StringReader;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 import org.faceless.pdf.PDF;
 import org.faceless.pdf.PDFPage;
@@ -28,7 +29,7 @@ public class PDFGenerator {
 	public static void  generatePDF(String str,EOClient client) {
 		try{
 
-			File fileName=new File(AFWebContextListener.contextPath+"james.html");
+			//File fileName=new File(AFWebContextListener.contextPath+"james.html");
 			ReportParser parser=ReportParser.getInstance();
 			PDF pdf=null;//parser.parse(fileName);
 			if(str!=null) {
@@ -66,7 +67,9 @@ public class PDFGenerator {
 			fo.close();
 			List<String> attachmentsPath=Arrays.asList(AFWebContextListener.contextPath+"Invoice.pdf");
 			System.out.println("PDF created sucessfully.  "+pdf.getInfo("Title"));
-			 EmailUtility.sendMailViaGmail(null, "Billing Invoice", "Please find the attachement.", Arrays.asList(client.getEmailID()), Arrays.asList("Invoice.pdf"), attachmentsPath);
+			if(Objects.nonNull(client)) {
+				EmailUtility.sendMailViaGmail(null, "Billing Invoice", "Please find the attachement.", Arrays.asList(client.getEmailID()), Arrays.asList("Invoice.pdf"), attachmentsPath);
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

@@ -39,7 +39,7 @@ public class EOMedicine extends AFMainEntity {
     @Temporal(TemporalType.TIMESTAMP)
     private Date modifiedOn;
     private Double purchasePrice;
-    
+    private String mfgBy;
 	@Override
 	public Long primaryKey() {
 		return this.primaryKey;
@@ -170,6 +170,14 @@ public class EOMedicine extends AFMainEntity {
 
 	public Long getPrimaryKey() {
 		return primaryKey;
+	}
+
+	public String getMfgBy() {
+		return mfgBy;
+	}
+
+	public void setMfgBy(String mfgBy) {
+		this.mfgBy = mfgBy;
 	}
 	
 	

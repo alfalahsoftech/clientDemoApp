@@ -28,7 +28,7 @@ public class PdfService extends AFBaseController{
 	@Path("/genPDF")
 	@Produces("application/pdf")
 	public Response getFile(String str) {
-		System.out.println("genPDF======================="+str);
+		//System.out.println("genPDF======================="+str);
 		JSONObject jsonObj  = this.jsonObject(str);
 		Long clientPK= jsonObj.getLong("clientPK");
 		

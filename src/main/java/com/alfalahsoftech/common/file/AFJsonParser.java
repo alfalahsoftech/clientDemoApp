@@ -180,7 +180,7 @@ public class AFJsonParser extends AFObject{
 		BufferedReader bfr = new BufferedReader(fr);
 		String line  = bfr.readLine();
 		while (line != null) {
-			System.out.println(line);
+//			System.out.println(line);
 			if(line.trim().equalsIgnoreCase("<tr>")) {
 				line  = bfr.readLine();
 				line  = bfr.readLine();
@@ -193,7 +193,7 @@ public class AFJsonParser extends AFObject{
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(mediList);
+		//System.out.println(mediList);
 		return mediList;
 	}
 

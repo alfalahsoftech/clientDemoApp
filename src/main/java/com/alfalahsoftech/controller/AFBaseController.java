@@ -1,6 +1,7 @@
 package com.alfalahsoftech.controller;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,6 +22,7 @@ import com.alfalahsoftech.alframe.ajax.AFResponseObject;
 import com.alfalahsoftech.alframe.annotation.AFControllerSetup;
 import com.alfalahsoftech.alframe.factory.AFReqRespThreadFactory;
 import com.alfalahsoftech.inv.entity.AFMainEntity;
+import com.alfalahsoftech.medi.entity.EOMedicine;
 import com.google.gson.Gson;
 
 public abstract class AFBaseController extends AFObject {
@@ -64,6 +66,10 @@ public abstract class AFBaseController extends AFObject {
 	public  List<AFMainEntity> getAllData(Class<?> cls){
 		List<AFMainEntity> clientList = this.entityMgr().createQuery("SELECT e FROM "+cls.getSimpleName()+" e").getResultList();
 		return clientList;
+	}
+	
+	public AFBaseController() {
+	print("AFBaseController  constructor called!!!!!!!!!!!!!!!!!!!!!!");
 	}
 	
 	public  <T>  T genericAllData(Class<T> cls){

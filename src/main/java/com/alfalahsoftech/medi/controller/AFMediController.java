@@ -21,8 +21,10 @@ import com.alfalahsoftech.alframe.AFHashMap;
 import com.alfalahsoftech.common.file.AFJsonParser;
 import com.alfalahsoftech.controller.AFBaseController;
 import com.alfalahsoftech.medi.entity.EOMedicine;
+import com.alfalahsoftech.service.UserSrvcImpl;
 
 @Path("medi")
+@SuppressWarnings("unchecked")
 public class AFMediController extends AFBaseController {
 
 	Response response;
@@ -38,6 +40,7 @@ public class AFMediController extends AFBaseController {
 		this.commit();
 		return "{msg:Successfully added!}";
 	}
+	UserSrvcImpl srvc = new UserSrvcImpl();
 
 	@POST
 	@Path("/dispMedi")
@@ -45,16 +48,16 @@ public class AFMediController extends AFBaseController {
 	@Produces(value= { MediaType.APPLICATION_JSON})
 	public Response dispMedi(String reqStr) {
 		printObj("dispMedi request:  "+reqStr);
-		List<EOMedicine> list =  (List<EOMedicine>) this.genericAllData(EOMedicine.class);
+		List<EOMedicine> list = (List<EOMedicine>) this.genericAllData(EOMedicine.class);// srvc.allEOMedicineData();
 		
-		print("Reading medicnie files===============");
+		/*print("Reading medicnie files===============");
 		AtomicInteger i = new AtomicInteger(0);
 		ArrayList<String> mediList = AFJsonParser.getAllMedi();
 		mediList.forEach(mediName->{
 			list.get(i.getAndIncrement()).setMediName(mediName);
-		});
+		});*/
 		response = this.createResponse(list);
-		System.out.println(list);
+		//System.out.println(list);
 		return response;
 	}
 

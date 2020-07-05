@@ -14,11 +14,11 @@ public class EOOrderDayDetailUIO extends AFObject{
 	public String notes;
 	public Integer quantity= Integer.valueOf(0);
 	public Date orderDate;
-	public double gstPerc;
-	public double unitCost;
+	public Double gstPerc;
+	public Double unitCost;
 	public String clientName;
 	public String name;
-	public double totalPrice;
+	public Double totalPrice;
 	
 	EOOrderDayDetailUIO() {}
 	public 	EOOrderDayDetailUIO(EOOrderDayDetail eo) {
