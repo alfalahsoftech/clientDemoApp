@@ -83,6 +83,8 @@ public class AFMediController extends AFBaseController {
 		EOMedicine medi =this.getObjFromStr(EOMedicine.class	, reqStr);
 
 		EOMedicine obj = (EOMedicine)this.reqRespObject().reqEM().createQuery("SELECT e FROM EOMedicine e where primaryKey="+jsonObj.getLong("primaryKey")).getResultList().get(0);
+		
+//		Object obj =this.updateObject(EOMedicine.class, reqStr);
 		/*obj.setItemID(	jsonObj.getString("itemID"));
 		obj.setMediName(jsonObj.getString("mediName"));
 		obj.setScheme(jsonObj.getString("scheme"));
@@ -108,10 +110,14 @@ public class AFMediController extends AFBaseController {
 		obj.setIsActive(medi.getIsActive());
 		obj.setExpDate(medi.getExpDate());
 		obj.setNotes(medi.getNotes());
+		obj.setMfgBy(medi.getMfgBy());
+		obj.setNetRatePerc(medi.getNetRatePerc());
+		obj.setPack(medi.getPack());
 		//Transaxtion
 		this.reqRespObject().startTransaction();
-		this.reqRespObject().reqEM().persist(obj);
+		this.reqRespObject().reqEM().merge(obj);
 		this.reqRespObject().endTransaction();
+		
 		//	}
 		response = this.createResponse(obj);
 		return response;

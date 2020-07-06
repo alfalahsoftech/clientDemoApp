@@ -18,3 +18,34 @@ Caused by: org.hibernate.MappingException: Repeated column in mapping for entity
 
 
 	
+	
+	====================================Deploye from Github
+	
+	1.Create a New file named Procfile withoud extension
+	2.add below only
+	web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
+	
+	1.Open pom.xml
+	2.add below in <build>
+	 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.heroku</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>9.0.30.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+	
+	

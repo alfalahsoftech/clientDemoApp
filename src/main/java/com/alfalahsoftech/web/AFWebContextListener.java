@@ -53,6 +53,7 @@ public class AFWebContextListener implements ServletContextListener {
 		}
 		AFApplicationObject.factoryObj().startApplication();
 	//	AFApplicationObject.factoryObj().loadData();
+		HitOtherApplication.hitApp();
 	}
 
 }

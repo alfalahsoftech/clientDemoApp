@@ -40,6 +40,9 @@ public class EOMedicine extends AFMainEntity {
     private Date modifiedOn;
     private Double purchasePrice;
     private String mfgBy;
+    private Double netRatePerc;
+    private String pack;
+    
 	@Override
 	public Long primaryKey() {
 		return this.primaryKey;
@@ -178,6 +181,22 @@ public class EOMedicine extends AFMainEntity {
 
 	public void setMfgBy(String mfgBy) {
 		this.mfgBy = mfgBy;
+	}
+
+	public Double getNetRatePerc() {
+		return netRatePerc;
+	}
+
+	public void setNetRatePerc(Double netRatePerc) {
+		this.netRatePerc = netRatePerc;
+	}
+
+	public String getPack() {
+		return pack;
+	}
+
+	public void setPack(String pack) {
+		this.pack = pack;
 	}
 	
 	
