@@ -88,4 +88,8 @@ public class UserSrvcImpl extends AFObject implements UserService {
 		List<? extends AFMainEntity> list = reqRespObject().reqEM().createQuery("SELECT e FROM "+cls.getSimpleName()+" e").getResultList();
 		return list;
 	}
+	@Override
+	public Long maxPrimaryKey(Class<?> cls) {
+		return(Long) reqRespObject().reqEM().createQuery("SELECT max(primaryKey) FROM "+cls.getSimpleName()+" e").getSingleResult();
+	}
 }

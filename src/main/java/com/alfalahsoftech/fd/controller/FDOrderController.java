@@ -71,7 +71,7 @@ import com.google.gson.GsonBuilder;
 public class FDOrderController extends FoodBaseController {
 
 	Logger log= Logger.getLogger(FDOrderController.class);
-	static UserService userSrvc = new UserSrvcImpl();
+	 UserService userSrvc = new UserSrvcImpl();
 
 	@Context
 	SecurityContext securityCtx;

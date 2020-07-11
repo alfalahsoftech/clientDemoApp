@@ -24,6 +24,7 @@ public interface UserService {
 	public void insertEntity(AFMainEntity entity);
 	public List<AFMainEntity> getData(Class<?> cls);
 	public List<? extends AFMainEntity> genericData(Class<?> cls);
+	public Long maxPrimaryKey(Class<?> cls);
 	
 
 }

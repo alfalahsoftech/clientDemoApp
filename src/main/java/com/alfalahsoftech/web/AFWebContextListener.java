@@ -16,8 +16,8 @@ import com.alfalahsoftech.common.file.AFJsonParser;
 
 @WebListener
 public class AFWebContextListener implements ServletContextListener {
- public static String contextPath=null;
- public static JSONObject appConfig;
+	public static String contextPath=null;
+	public static JSONObject appConfig;
 	@Override
 	public void contextInitialized(ServletContextEvent contextEvent) {
 		System.out.println("############  contextInitialization started  ###########");
@@ -42,7 +42,7 @@ public class AFWebContextListener implements ServletContextListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		AFApplicationObject.factoryObj().servletContext=contextEvent.getServletContext();
 
 		//	FNApplicationObject.factory().loadStartUpConfig();
@@ -52,8 +52,11 @@ public class AFWebContextListener implements ServletContextListener {
 			AFApplicationObject.argMap.put(contextParam, contextEvent.getServletContext().getInitParameter(contextParam));
 		}
 		AFApplicationObject.factoryObj().startApplication();
-	//	AFApplicationObject.factoryObj().loadData();
-		HitOtherApplication.hitApp();
+		//	AFApplicationObject.factoryObj().loadData();
+		if(AFWebContextListener.appConfig.getBoolean("isProdEnvorment")) {
+			HitOtherApplication.hitApp();
+		}
+
 	}
 
 }

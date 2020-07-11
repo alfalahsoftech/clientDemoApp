@@ -49,7 +49,7 @@ public class AFMediController extends AFBaseController {
 	public Response dispMedi(String reqStr) {
 		printObj("dispMedi request:  "+reqStr);
 		List<EOMedicine> list = (List<EOMedicine>) this.genericAllData(EOMedicine.class);// srvc.allEOMedicineData();
-		
+	
 		/*print("Reading medicnie files===============");
 		AtomicInteger i = new AtomicInteger(0);
 		ArrayList<String> mediList = AFJsonParser.getAllMedi();
