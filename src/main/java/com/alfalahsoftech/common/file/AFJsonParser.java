@@ -203,17 +203,31 @@ public class AFJsonParser extends AFObject{
 		
 		File file = new File("./src/main/resources/META-INF/glbDir/medi.txt");
 		ArrayList<String> mediList = new ArrayList<>();
+		HashMap<String,String> medi_type = new HashMap<>();
 		try {
 		FileReader fr = new FileReader(file);
 		BufferedReader bfr = new BufferedReader(fr);
 		String line  = bfr.readLine();
+		 
 		while (line != null) {
-			System.out.println(line);
+//			System.out.println(line);
 			if(line.trim().equalsIgnoreCase("<tr>")) {
-				line  = bfr.readLine();
+				
+				line  = bfr.readLine();  //1-skip
 				line  = bfr.readLine();
 				line = line.replace("<td>", "").replace("</td>","");
+				String name_type=line.trim();
 				mediList.add(line.trim());
+				line  = bfr.readLine();  //3-skip 
+				line  = bfr.readLine();  //4-skip
+				line  = bfr.readLine();  //5-skip
+				line  = bfr.readLine();  //6-skip
+				line  = bfr.readLine();  //7-skip
+				line  = bfr.readLine();  //8-skip
+				line  = bfr.readLine();  //9-skip
+				line = line.replace("<td>", "").replace("</td>","");
+				
+				medi_type.put(name_type, (line!=null?line.trim():""));
 				
 			}
 			line  = bfr.readLine();
@@ -221,6 +235,11 @@ public class AFJsonParser extends AFObject{
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+
+		System.out.println(medi_type.size());
+		System.out.println(medi_type);
+		
+		System.out.println(mediList.size());
 		System.out.println(mediList);
 		
 		//		File file = new File(AFWebContextListener.contextPath+"src/main/resources/META-INF/glbDir/menu/menu.txt");
@@ -229,7 +248,7 @@ public class AFJsonParser extends AFObject{
 		try {
 
 		Object obj=	getGsonObject().fromJson(jsonToSingleString(new File("./src/main/resources/META-INF/glbDir/menu/tdyaudmainjson.json")),type);
-		System.out.println(obj);
+		//System.out.println(obj);
 
 		/*	String jsonString= jsonToSingleString(new FileReader(file));
 			HashMap<String,Object> m = (HashMap<String,Object>)stringToJson(jsonString).get(0);
